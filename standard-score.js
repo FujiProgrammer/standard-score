@@ -93,8 +93,12 @@ function calcSS(score, ave, frequency_table){
 
     //偏差値の公式：偏差/標準偏差*10+50 = (自分の得点-平均)÷標準偏差×10+50
     var ss = (score - ave)/standard_deviation*10 + 50; //偏差値の計算（平均は階級値から求めた平均ではなく、正規の平均を使用）
+    
+    //偏差値を小数点1位に
     ss = ss.toFixed(1);
+    
     return ss; //戻り値
+    
   }else{
     return "";
   }
